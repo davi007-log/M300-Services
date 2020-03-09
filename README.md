@@ -1,5 +1,5 @@
 # M300
-## 1. Description
+## 1. Beschreibung
 Modulnummer:    300
 Modulname:      Plattformübergreifende Dienste in ein Netzwerk integrieren
 
