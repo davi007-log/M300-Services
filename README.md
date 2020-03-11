@@ -29,7 +29,12 @@ Um sich im Filesystem zurechtzufinden, sind folgende Befehle nützlich:
 * `pwd` zeigt den aktuellen Pfad an.
 * Die Windows Befehle stehen auch im Terminal zur Verfügung, z.B. `notepad README.md`
 #### Ablauf
-Als aller erstes wurde ein Github Account erstellt
+Als aller erstes wurde ein Github Account erstellt. Nachdem erscheint die Willkommens-Seite wo man auf ''Stat a project'' klicken kann.
+Unter Repository name definiert man einen Namen, in diesem Fall wählte ich M300-Services.
+Dann wählte ich Initialize this repository with a README damit man Information festlegen kann und eine Übersicht erhält.
+
+Danach musste ich den Github Account an den SSH Key anerkennen und in der Bash einen SSH Key generieren.
+nun kann man folgenden Pfad kopieren ($HOME/.ssh/id_rsa.pub) und mit dem Command ''Cat $HOME/.ssh/id_rsa.pub'' zeigt er den kompletten Inhalt vom SSH Key an. Dieser kopiert man und fügt ihn auf dem Github Account unter settings im Abschnitt SSH Keys und GPG keys ein.
 
 ## 3. Leistungsbeurteilung 01 (LB01)
 Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theorieprüfung handelt.
