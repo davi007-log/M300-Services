@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Davide/Desktop/M300/M300-Services/myserver","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/var/www/html":{"guestpath":"/var/www/html","hostpath":"C:/Users/Davide/Desktop/M300/M300-Services/LB2/myserver","disabled":false,"__vagrantfile":true}}}
