@@ -28,6 +28,52 @@ Um sich im Filesystem zurechtzufinden, sind folgende Befehle nützlich:
 * `ls -l` zeigt die Dateien im aktuellen Verzeichnis an
 * `pwd` zeigt den aktuellen Pfad an.
 * Die Windows Befehle stehen auch im Terminal zur Verfügung, z.B. `notepad README.md`
+
+## Leistungsbeurteilung 02 (LB02)
+## Ziel der LB
+Am Schluss stehen sechs Maschinen. Es wird per Vagrantfile und Shell Scripts ein Webserver erstellt, welches ein CMS (WordPress) einrichtet. Die entsprechende Datenbank wird auf einem Datenbankserver erstellt. Die Seite wird über einen DNS-Namen (Test.ch, www.Test.ch) erreichbar sein, damit man sich nicht die IP-Adresse merken muss. Auch wird ein Zertifikat erstellt, welches von einer lokalen CA signiert wird und anschliessend wird das Zertifikat auf dem Webserver installiert werden. Der Client intern stellt sicher, dass über LAN die Webseite erreichbar ist und der Client extern stellt sicher, dass die Webseite auch von einem anderen Netzwerk aus erreichbar ist.
+
+## Alle Maschinen erklärt
+
+### Webserver
+- Webseite wird bereitgestellt
+- LAMP Stack installiert (Linux, Apache2, MySQL, PHP)
+- Über HTTPs erreichbar
+- Zertifikat eingebunden (von CA signiert)
+- WordPress als CMS installiert
+- WP-CLI installiert, damit die WordPress Installation automatisiert werden kann
+- Firewall eingerichtet
+- Reverse Proxy eingerichtet
+- Authentisierung für die Webseite aktivieren
+
+### Datenbankserver
+- Datenbank wird bereitgestellt
+- Firewall eingerichtet
+- Datenbank Remote Access erlaubt
+
+### CA Server
+- Zertifikat erstellen
+- Zertifikat durch eigene CA signieren
+- Firewall eingerichtet
+
+### DHCP-Server (Deprecated)
+- DHCP-Server konfiguriert
+- Firewall eingerichtet
+
+### DNS-Server
+- Namensauflösung für das lokale Netzwerk
+- Forward-Lookup Zone erstellt
+- Reverse-Lookup Zone erstellt
+- Webseite über Test.ch erreichbar
+- Firewall eingerichtet
+
+### Client intern
+- Firewall eingerichtet
+- Testen, ob Webseitenzugriff über die interne IP-Adresse funktioniert
+
+### Client extern
+- Firewall eingerichtet
+- Testen, ob Webseitenzugriff über die externe IP-Adresse funktioniert
 #### Ablauf
 Als aller erstes wurde ein Github Account erstellt. Nachdem erscheint die Willkommens-Seite wo man auf ''Stat a project'' klicken kann.
 Unter Repository name definiert man einen Namen, in diesem Fall wählte ich M300-Services.
@@ -39,6 +85,6 @@ nun kann man folgenden Pfad kopieren ($HOME/.ssh/id_rsa.pub) und mit dem Command
 ## 3. Leistungsbeurteilung 01 (LB01)
 Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theorieprüfung handelt.
 
-## 4. Leistungsbeurteilung 02 (LB02)
+
 
 
