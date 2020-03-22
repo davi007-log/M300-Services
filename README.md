@@ -33,7 +33,6 @@ Um sich im Filesystem zurechtzufinden, sind folgende Befehle nützlich:
 ## Ziel der LB
 Am Schluss stehen sechs Maschinen. Es wird per Vagrantfile und Shell Scripts ein Webserver erstellt, welches ein CMS (WordPress) einrichtet. Die entsprechende Datenbank wird auf einem Datenbankserver erstellt. Die Seite wird über einen DNS-Namen (Test.ch, www.Test.ch) erreichbar sein, damit man sich nicht die IP-Adresse merken muss. Auch wird ein Zertifikat erstellt, welches von einer lokalen CA signiert wird und anschliessend wird das Zertifikat auf dem Webserver installiert werden. Der Client intern stellt sicher, dass über LAN die Webseite erreichbar ist und der Client extern stellt sicher, dass die Webseite auch von einem anderen Netzwerk aus erreichbar ist.
 
-## Alle Maschinen erklärt
 
 ### Webserver
 - Webseite kann abgerufen werden
@@ -43,10 +42,7 @@ Am Schluss stehen sechs Maschinen. Es wird per Vagrantfile und Shell Scripts ein
 - Firewall eingerichtet
 - Reverse Proxy eingerichtet
 
-### CA Server
-- Zertifikat erstellen
-- Zertifikat durch eigene CA signieren
-- Firewall eingerichtet
+
 
 #### Ablauf
 Als aller erstes wurde ein Github Account erstellt. Nachdem erscheint die Willkommens-Seite wo man auf ''Stat a project'' klicken kann.
