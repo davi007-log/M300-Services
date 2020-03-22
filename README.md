@@ -36,44 +36,18 @@ Am Schluss stehen sechs Maschinen. Es wird per Vagrantfile und Shell Scripts ein
 ## Alle Maschinen erklärt
 
 ### Webserver
-- Webseite wird bereitgestellt
-- LAMP Stack installiert (Linux, Apache2, MySQL, PHP)
-- Über HTTPs erreichbar
+- Webseite kann abgerufen werden
+- Apache installiert 
+- Über HTTP erreichbar
 - Zertifikat eingebunden (von CA signiert)
-- WordPress als CMS installiert
-- WP-CLI installiert, damit die WordPress Installation automatisiert werden kann
 - Firewall eingerichtet
 - Reverse Proxy eingerichtet
-- Authentisierung für die Webseite aktivieren
-
-### Datenbankserver
-- Datenbank wird bereitgestellt
-- Firewall eingerichtet
-- Datenbank Remote Access erlaubt
 
 ### CA Server
 - Zertifikat erstellen
 - Zertifikat durch eigene CA signieren
 - Firewall eingerichtet
 
-### DHCP-Server (Deprecated)
-- DHCP-Server konfiguriert
-- Firewall eingerichtet
-
-### DNS-Server
-- Namensauflösung für das lokale Netzwerk
-- Forward-Lookup Zone erstellt
-- Reverse-Lookup Zone erstellt
-- Webseite über Test.ch erreichbar
-- Firewall eingerichtet
-
-### Client intern
-- Firewall eingerichtet
-- Testen, ob Webseitenzugriff über die interne IP-Adresse funktioniert
-
-### Client extern
-- Firewall eingerichtet
-- Testen, ob Webseitenzugriff über die externe IP-Adresse funktioniert
 #### Ablauf
 Als aller erstes wurde ein Github Account erstellt. Nachdem erscheint die Willkommens-Seite wo man auf ''Stat a project'' klicken kann.
 Unter Repository name definiert man einen Namen, in diesem Fall wählte ich M300-Services.
@@ -81,6 +55,8 @@ Dann wählte ich Initialize this repository with a README damit man Information 
 
 Danach musste ich den Github Account an den SSH Key anerkennen und in der Bash einen SSH Key generieren.
 nun kann man folgenden Pfad kopieren ($HOME/.ssh/id_rsa.pub) und mit dem Command ''Cat $HOME/.ssh/id_rsa.pub'' zeigt er den kompletten Inhalt vom SSH Key an. Dieser kopiert man und fügt ihn auf dem Github Account unter settings im Abschnitt SSH Keys und GPG keys ein.
+
+Der Rest ging nach Anleitung doch viele Konfiguration und Commands konnte ich anch Anleitung nicht machen und somit kam ich zu den Problemen. EInige Ordner wie die für Benutzer und Gruppen benötigt waren, waren nicht erstellt worden wie es in der Anleitung stand.
 
 ## 3. Leistungsbeurteilung 01 (LB01)
 Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theorieprüfung handelt.
