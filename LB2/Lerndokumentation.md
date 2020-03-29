@@ -18,13 +18,3 @@ Mark Down wird beispielsweise zum Dokumentieren verwendet. Dieser Text hier ist 
 ## Systemsicherheit
 Heutzutage ist Sicherheit ein sehr wichtiges Thema und es wird immer wichtiger und wichtiger. Angreifer werden immer schlauer und wenden immer bessere Angriffe an. Deswegen ist es für den Systemadministrator wichtig sein System zu schützen, damit dies nicht in fremde Hände gelangen kann. Aus diesem Grund habe ich bei auf der Maschine eine UFW Firewall (Uncomplicated FireWall) konfiguriert.
 
-### Erstellte Firewallregeln
-
-#### Web
-- Allow from 10.0.2.2 to any port 22 (SSH vom Host aus)
-- Allow 443/tcp (HTTPS auf die Webseite)
-
-
-#### Client
-- Allow from 192.168.1.25 to any port 22 (SSH vom Host aus)
-
