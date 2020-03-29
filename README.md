@@ -31,14 +31,16 @@ Um sich im Filesystem zurechtzufinden, sind folgende Befehle nützlich:
 
 ## Leistungsbeurteilung 02 (LB02)
 ## Ziel der LB
-Am Schluss stehen sechs Maschinen. Es wird per Vagrantfile und Shell Scripts ein Webserver erstellt, welches ein CMS (WordPress) einrichtet. Die entsprechende Datenbank wird auf einem Datenbankserver erstellt. Die Seite wird über einen DNS-Namen (Test.ch, www.Test.ch) erreichbar sein, damit man sich nicht die IP-Adresse merken muss. Auch wird ein Zertifikat erstellt, welches von einer lokalen CA signiert wird und anschliessend wird das Zertifikat auf dem Webserver installiert werden. Der Client intern stellt sicher, dass über LAN die Webseite erreichbar ist und der Client extern stellt sicher, dass die Webseite auch von einem anderen Netzwerk aus erreichbar ist.
+- Am Schluss funktionieren alle Maschinen. 
+- Es wird per Vagrantfile und Shell Scripts ein Webserver erstellt.
+- Alle Codes sind im Vagrantfile ersichtlich
+- Neues über die Virtualisierung gelernt
 
 
 ### Webserver
 - Webseite kann abgerufen werden
 - Apache installiert 
 - Über HTTP erreichbar
-- Zertifikat eingebunden (von CA signiert)
 - Firewall eingerichtet
 - Reverse Proxy eingerichtet
 
@@ -53,6 +55,7 @@ Danach musste ich den Github Account an den SSH Key anerkennen und in der Bash e
 nun kann man folgenden Pfad kopieren ($HOME/.ssh/id_rsa.pub) und mit dem Command ''Cat $HOME/.ssh/id_rsa.pub'' zeigt er den kompletten Inhalt vom SSH Key an. Dieser kopiert man und fügt ihn auf dem Github Account unter settings im Abschnitt SSH Keys und GPG keys ein.
 
 Der Rest ging nach Anleitung doch viele Konfiguration und Commands konnte ich anch Anleitung nicht machen und somit kam ich zu den Problemen. EInige Ordner wie die für Benutzer und Gruppen benötigt waren, waren nicht erstellt worden wie es in der Anleitung stand.
+Neben der Anleitung die auf GitHub zu finden war, erstellte ich ein weiteres Word-Dokument mit einer selbstgemachte Dokumentation, die einige Schritte von der Kofiguration zeigen.
 
 ## 3. Leistungsbeurteilung 01 (LB01)
 Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theorieprüfung handelt.
