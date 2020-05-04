@@ -60,6 +60,44 @@ Neben der Anleitung die auf GitHub zu finden war, erstellte ich ein weiteres Wor
 ## 3. Leistungsbeurteilung 01 (LB01)
 Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theorieprüfung handelt.
 
+## 4. Leistungsbeurteilung 03 (LB03)
 
+### Docker
+
+Docker nahm die bestehende Linux-Containertechnologie auf und verpackte und erweiterte sie in vielerlei Hinsicht – vor allem durch portable Images und eine benutzerfreundliche Schnittstelle –, um eine vollständige Lösung für das Erstellen und Verteilen von Containern zu schaffen.
+
+Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten: der Docker Engine, die für das Erstellen und Ausführen von Containern verantwortlich ist, sowie dem Docker Hub, einem Cloud Service, um Container-Images zu verteilen.
+
+Wichtig: Docker wurde für 64-bit Linux Systeme entwickelt, kann jedoch auch mittels VirtualBox auf Mac und Windows betrieben werden.
+
+Architektur
+Nachfolgend sind die wichtigsten Komponenten von Docker aufgelistet:
+
+Docker Deamon
+
+Erstellen, Ausführen und Überwachen der Container
+Bauen und Speichern von Images
+Der Docker Daemon wird normalerweise durch das Host-Betriebssystem gestartet.
+
+Docker Client
+
+Docker wird über die Kommandozeile (CLI) mittels des Docker Clients bedient
+Kommuniziert per HTTP REST mit dem Docker Daemon
+Da die gesamte Kommunikation über HTTP abläuft, ist es einfach, sich mit entfernten Docker Daemons zu verbinden und Bindings an Programmiersprachen zu entwickeln.
+
+Images
+
+Images sind gebuildete Umgebungen welche als Container gestartet werden können
+Images sind nicht veränderbar, sondern können nur neu gebuildet werden.
+Images bestehen aus Namen und Version (TAG), z.B. ubuntu:16.04.
+Wird keine Version angegeben wird automatisch :latest angefügt.
+Container
+
+Container sind die ausgeführten Images
+Ein Image kann beliebig oft als Container ausgeführt werden
+Container bzw. deren Inhalte können verändert werden, dazu werden sogenannte Union File Systems verwendet, welche nur die Änderungen zum original Image speichern.
+Docker Registry
+
+In Docker Registries werden Images abgelegt und verteilt
 
 
