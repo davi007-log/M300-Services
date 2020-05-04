@@ -131,7 +131,7 @@ Mit folgenden Command lässt sich der Apache Container installieren:
 
 > docker container run -it -p 8082:80 mysql 
 
-Nun sind die Container installiert und laufen. Für den Test kann man im Browser: http://localhost:(port) eingeben. Wenn die Webserver ersichtlich sind dann hat es geklappt.
+Nun sind die Container installiert und laufen. Für den Test kann man im Browser: http://localhost:port eingeben. Wenn die Webserver ersichtlich sind dann hat es geklappt.
 
 Beim erstellen eines Containers, für welches ein neues Image gebraucht wird, beziehungsweise ein Image benötigt wird, welches nicht lokal vorhanden ist, wird ein Pull Request von docker hub ausgeführt, damit es lokal downgeloaded ist.
 
@@ -179,14 +179,14 @@ Hier kann man nun ein Image erstellen. Dies ist mit dem Docker File zu machen. H
 Im Dockerfile habe ich definiert, mit welchem Image ich arbeite, wo meine Workdirectory ist und, dass das Image alle Inhalte von der Workdirectory in mein Image kopieren soll.
 
 Als nächstes geht es darum, das Image zu "bauen". Dies macht man mit folgendem Command:
-> docker image build -t seanm300/nginx-website-m300 . 
+> docker image build -t davidem300/homepage-nginx . 
 
 Docker image build -t würde das Image lokal abspeichern. Da ich es jedoch nachher noch auf mein Dockerhub pushen möchte habe ich noch mein Username von Dockerhub und den namen der Webseite festgelegt. Der Punkt am Schluss bezieht sich auf das Dokerfile in der Directory.
 
 Nun ist das Image lokal verfügbar, und man kann bereits mit dem einen Container erstellen. Jedoch möchte ich, dass ich das von jedem Computer aus machen kann. Also pushe ich das noch von meinem Dockerhub Account.
 
 Der Command dazu wäre:
-> Docker push seanm300/nginx-website-m300
+> Docker push davidem300/nginx-website-m300
 
 ![](/Images/docker/push-docker-image.JPG)
 
