@@ -103,7 +103,7 @@ In Docker Registries werden Images abgelegt und verteilt
 ### Docker download
 Als Erstes geht es darum Docker zu installieren. Ich arbeite auf einer Ubuntu VM.
 
-Hierzu habe ich die Anleitung von Docker [Docker Anleitung Download](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+Hierzu habe ich die Anleitung von Docker [Docker Anleitung Download](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 
 Nach der Installation kann man die Funktionsfähigkeit von Docker mit dem folgenden Command testen:
 
