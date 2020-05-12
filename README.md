@@ -147,7 +147,7 @@ Nach der Installation kann man die Funktionsfähigkeit von Docker mit dem folgen
 
 > run 'Hello-world'
 
-![](/Users/Davide/Desktop/M300/lb03/3.png)
+![](/bilder/3.png)
 
 Falls dieses Bild erscheint kann man mit den Container & Images fortfahren.
 
