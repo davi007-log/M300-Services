@@ -61,6 +61,23 @@ Neben der Anleitung die auf GitHub zu finden war, erstellte ich ein weiteres Wor
 Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theorieprüfung handelt.
 
 ## 4. Leistungsbeurteilung 03 (LB03)
+## Containerisierung
+Bei der Containerisierung handelt es sich um eine Art Virtualisierung auf Anwendungsebene, bei der mehrere isolierte Maschinen auf einem einzelnen Kernel ausgeführt werden können. Diese Maschinen werden Container genannt.
+
+Container bieten eine Standardmethode um Anwendungscode, Laufzeitumgebung, Systemwerkzeugen, Systembibliotheken und Konfigurationen in einer Maschine zusammenzufassen. Im Gegensatz zu VMS, die alle ihren eigenen "Kernel" haben, teilen sich Container einen Kernel (Betriebssystem), der auf der Hardware installiert ist.
+
+Folgendes Bild zeigt den Unterschied zwischen Container und Virtuellen Maschinen:
+
+![](/Images/Container/difference.JPG)
+
+Die Vorteile der Containerisierung sind:
+
+* Resourcenbedarf (weniger Resourcen als VMs)
+  
+* Effizient (Container nutzen Serverresourcen sehr dynamisch  aus )
+  
+* Performance (Container haben bringen mehr Leistung, als VMs, weil das Gastbetriebssystem auch seine eigenen Speicheranforderungen erfüllen und wertvollen Arbeitsspeicher des Hosts belegen muss)
+
 ### Container
 Container ändern die Art und Weise, wie wir Software entwickeln, verteilen und laufen lassen, grundlegend.
 
