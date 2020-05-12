@@ -181,7 +181,7 @@ Ich werde im folgenden mit den Apache und mysql Images arbeiten.
 
 Apache werde ich als Backend installieren und mysql als frontend.
 
-![](/Images/container.JPG)
+![](/Images/container.png)
 
 Mit folgenden Command lässt sich der Apache Container installieren: 
 
@@ -194,7 +194,7 @@ Nun sind die Container installiert und laufen. Für den Test kann man im Browser
 
 Beim erstellen eines Containers, für welches ein neues Image gebraucht wird, beziehungsweise ein Image benötigt wird, welches nicht lokal vorhanden ist, wird ein Pull Request von docker hub ausgeführt, damit es lokal downgeloaded ist.
 
-![](/Images/docker/pull-image.JPG)
+![](/Images/push.png)
 
 Hier sind noch weitere Docker commands:
 
