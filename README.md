@@ -68,7 +68,7 @@ Container bieten eine Standardmethode um Anwendungscode, Laufzeitumgebung, Syste
 
 Folgendes Bild zeigt den Unterschied zwischen Container und Virtuellen Maschinen:
 
-![](/Images/Container/difference.JPG)
+![](https://jaxenter.de/wp-content/uploads/2017/03/wurbs_container_1.jpg)
 
 Die Vorteile der Containerisierung sind:
 
