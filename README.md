@@ -194,7 +194,7 @@ Nun sind die Container installiert und laufen. Für den Test kann man im Browser
 
 Beim erstellen eines Containers, für welches ein neues Image gebraucht wird, beziehungsweise ein Image benötigt wird, welches nicht lokal vorhanden ist, wird ein Pull Request von docker hub ausgeführt, damit es lokal downgeloaded ist.
 
-![](/Images/push.png)
+![](/Images/dockerpull.png)
 
 Hier sind noch weitere Docker commands:
 
@@ -229,16 +229,19 @@ Ich habe mir einen Test Ordner erstellt, welchen ich gemappt habe. Im Command is
 
 Im Testordner habe ich nun ein index.html file erstellt, welches das Original überschreibt. Diese Änderungen geschehen allem im Container.
 
-![](/Images/docker/docker-testdir.JPG)
+![](/Images/testordner.png)
 
 Hier kann man nun ein Image erstellen. Dies ist mit dem Docker File zu machen. Hierzu habe ich in der SELBEN Direcotory ein Dockerfile erstellt.
 
-![](/Images/docker/docker-file.JPG)
+![](/Images/dockerfile.png)
 
 Im Dockerfile habe ich definiert, mit welchem Image ich arbeite, wo meine Workdirectory ist und, dass das Image alle Inhalte von der Workdirectory in mein Image kopieren soll.
 
 Als nächstes geht es darum, das Image zu "bauen". Dies macht man mit folgendem Command:
 > docker image build -t davidem300/homepage-nginx . 
+
+![](/Images/docker image build.png)
+
 
 Docker image build -t würde das Image lokal abspeichern. Da ich es jedoch nachher noch auf mein Dockerhub pushen möchte habe ich noch mein Username von Dockerhub und den namen der Webseite festgelegt. Der Punkt am Schluss bezieht sich auf das Dokerfile in der Directory.
 
@@ -247,30 +250,31 @@ Nun ist das Image lokal verfügbar, und man kann bereits mit dem einen Container
 Der Command dazu wäre:
 > Docker push davidem300/nginx-website-m300
 
-![](/Images/docker/push-docker-image.JPG)
+![](/Images/docker push.png)
 
 Wichtig: Man muss sich natürlich zuerst noch authentifizieren. Hierzu einfach folgenden Command eingeben:
 > Docker login
 
 Danach kann man sich auf Dockerhub mit Username und Passwort einloggen.
 
-![](/Images/docker/dockerhub.JPG)
+![](/Images/docker/dockerhub.png)
 
 ## Testprotokoll
 | Testfall                      | Check          |
 | --------                      | -------------- |
-| Container wird angezeigt      | positiv        |
-| Webseite erreichbar           | positiv        |
+| Sicherheitsaspekte ausgeführt | positiv        |
+| Webserver erreichbar          | positiv        |
 | Applikation erreichbar        | positiv        |
-| Ports sind nicht besetzt      | positiv        |
+| docker login funktioniert     | positiv        |
 | Image funktioniert            | positiv        |
 | Image Dockerhub erreichbar    | positiv        |
+| nginx funktioniert            | positiv        |
 
 
-Als nächstes werde ich meine Container mit Sicherheitselementen beschmücken.
+Als nächstes werde ich meine Container mit Sicherheitsaspekten ausrüsten.
 
 ## Docker Projekt Sicherheit
-Im letzten Projekt habe ich meine Container erstellt und verwaltet. Nun geht es darum diese Container abzusichern. Es ist wichtig, dass Logging und Mitteilungen aktiviert sind. Das System muss dem Administrator behilflich sein. Im Ernstfall müssen Warnungen gesendet werden.
+Im letzten Projekt habe ich meine Container erstellt und verwaltet. Nun geht es darum diese Container abzusichern. Es ist wichtig, dass Logging und Mitteilungen aktiviert sind. Das System muss dem Administrator behilflich sein. Im Ernstfall müssen Warnungen gesendet werden. Weil nur so erkennt man die Fehler und weiss was nicht funktioniert hat.
 
 ### Meldungen an den Admin
 Eine gute Monitoring-Lösung sollte auf einen Blick den Zustand des Systems zeigen und rechtzeitig warnen, wenn Ressourcen knapp werden.
@@ -278,6 +282,9 @@ Docker Tools cAdvisor von Google ist das am häufigsten eingesetzte Monitoring-T
 
 Dieses Programm ist als Container verfügbar und man kann darauf zugreifen. Der folgende Command muss dazu aktiviert werden:
 >docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
+
+![](/Images/admin.png)
+
 
 ### Weitere Sicherheitsaspekte
 Ich habe folgende weitere Sicherheitsaspekte für meine Container realisiert:
@@ -287,21 +294,21 @@ Wenn man den Speicher schützt, kann man die Chancen von DDos Attacken minimiere
 
 > docker run -m 128m --memory-swap 128m amouat/stress stress --vm 1 --vm-bytes 127m -t 5s
 
-![](/Images/docker/RAM-protection.JPG)
+![](/Images/speicher.png)
 
 #### Neustarts begrenzen
 Ein Neustart verhindert Zeitverluste und Ressorcenverluste von einem sterbenden Container. Auch hier kann eine DDos Attacke verhindert werden. Der Command dazu wäre:
 
 > docker run -d --restart=on-failure:10 my-flaky-image
 
-![](/Images/docker/Restart-protection.JPG)
+![](/Images/neustart.png)
 
 #### Ressourcenbeschränken
 Der Kernel definiert Ressourcenbeschränkungen, die für Prozesse gesetzt werden können. Diese lassen sich auch auf Docker-Container anwenden. Hierzu wäre der Command:
 
 > docker run --ulimit cpu=12:14 amouat/stress stress --cpu 1
 
-![](/Images/docker/Ressource-protection.JPG)
+![](/Images/ressourcen.png)
 
 #### Capabilities einschränken 
 Der Linux-Kernel definiert eine Reihe von Berechtigungen, welche Prozessen zugewiesen werden können, um ihnen einen erweiterten Zugriff auf das System zu gestatten.
@@ -310,7 +317,7 @@ Die Capabilities decken einen grossen Funktionsbereich ab, vom Ändern der Syste
 
 > docker run --cap-drop all --cap-add CHOWN ubuntu chown 100 /tmp
  
-![](/Images/docker/Capabilities-protection.JPG)
+![](/Images/capabilities.png)
 
 
 ## Wissenszuwachs
