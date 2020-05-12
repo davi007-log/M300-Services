@@ -147,7 +147,7 @@ Nach der Installation kann man die Funktionsfähigkeit von Docker mit dem folgen
 
 > run 'Hello-world'
 
-![](/bilder/3.png)
+![](/Images/3.png)
 
 Falls dieses Bild erscheint kann man mit den Container & Images fortfahren.
 
@@ -181,7 +181,7 @@ Ich werde im folgenden mit den Apache und mysql Images arbeiten.
 
 Apache werde ich als Backend installieren und mysql als frontend.
 
-![](/Images/docker/docker-container.JPG)
+![](/Images/container.JPG)
 
 Mit folgenden Command lässt sich der Apache Container installieren: 
 
