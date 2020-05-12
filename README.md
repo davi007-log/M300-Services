@@ -61,6 +61,21 @@ Neben der Anleitung die auf GitHub zu finden war, erstellte ich ein weiteres Wor
 Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theorieprüfung handelt.
 
 ## 4. Leistungsbeurteilung 03 (LB03)
+### Container
+Container ändern die Art und Weise, wie wir Software entwickeln, verteilen und laufen lassen, grundlegend.
+
+Entwickler können Software lokal bauen, die woanders genauso laufen wird – sei es ein Rack in der IT-Abteilung, der Laptop eines Anwenders oder ein Cluster in der Cloud.
+
+Administratoren können sich auf die Netzwerke, Ressourcen und die Uptime konzentrieren und müssen weniger Zeit mit dem Konfigurieren von Umgebungen und dem Kampf mit Systemabhängigkeiten verbringen.
+
+Merkmale
+
+Container teilen sich Ressourcen mit dem Host-Betriebssystem
+Container können im Bruchteil einer Sekunde gestartet und gestoppt werden
+Anwendungen, die in Containern laufen, verursachen wenig bis gar keinen Overhead
+Container sind portierbar --> Fertig mit "Aber bei mir auf dem Rechner lief es doch!"
+Container sind leichtgewichtig, d.h. es können dutzende parallel betrieben werden.
+Container sind "Cloud-ready"!
 
 ### Docker
 ![](https://vshn.ch/wp-content/uploads/2016/12/20161128123126-large_v-trans-300x268.png)
