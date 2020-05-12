@@ -86,35 +86,40 @@ Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten:
 
 Wichtig: Docker wurde für 64-bit Linux Systeme entwickelt, kann jedoch auch mittels VirtualBox auf Mac und Windows betrieben werden.
 
-Architektur
+***
+
 Nachfolgend sind die wichtigsten Komponenten von Docker aufgelistet:
 
-Docker Deamon
+**Docker Deamon** <br>
+* Erstellen, Ausführen und Überwachen der Container
+* Bauen und Speichern von Images
 
-Erstellen, Ausführen und Überwachen der Container
-Bauen und Speichern von Images
 Der Docker Daemon wird normalerweise durch das Host-Betriebssystem gestartet.
 
-Docker Client
+**Docker Client** <br> 
+* Docker wird über die Kommandozeile (CLI) mittels des Docker Clients bedient
+* Kommuniziert per HTTP REST mit dem Docker Daemon
 
-Docker wird über die Kommandozeile (CLI) mittels des Docker Clients bedient
-Kommuniziert per HTTP REST mit dem Docker Daemon
 Da die gesamte Kommunikation über HTTP abläuft, ist es einfach, sich mit entfernten Docker Daemons zu verbinden und Bindings an Programmiersprachen zu entwickeln.
 
-Images
+**Images** <br> 
+* Images sind gebuildete Umgebungen welche als Container gestartet werden können
+* Images sind nicht veränderbar, sondern können nur neu gebuildet werden.
+* Images bestehen aus Namen und Version (TAG), z.B. *ubuntu:16.04.* 
+    * Wird keine Version angegeben wird automatisch :latest angefügt.
 
-Images sind gebuildete Umgebungen welche als Container gestartet werden können
-Images sind nicht veränderbar, sondern können nur neu gebuildet werden.
-Images bestehen aus Namen und Version (TAG), z.B. ubuntu:16.04.
-Wird keine Version angegeben wird automatisch :latest angefügt.
-Container
+**Container** <br> 
+* Container sind die ausgeführten Images
+* Ein Image kann beliebig oft als Container ausgeführt werden
+* Container bzw. deren Inhalte können verändert werden, dazu werden sogenannte *Union File Systems* verwendet, welche nur die Änderungen zum original Image speichern.
 
-Container sind die ausgeführten Images
-Ein Image kann beliebig oft als Container ausgeführt werden
-Container bzw. deren Inhalte können verändert werden, dazu werden sogenannte Union File Systems verwendet, welche nur die Änderungen zum original Image speichern.
-Docker Registry
+**Docker Registry** <br> 
+* In Docker Registries werden Images abgelegt und verteilt
 
-In Docker Registries werden Images abgelegt und verteilt
+Die Standard-Registry ist der Docker Hub, auf dem tausende öffentlich verfügbarer Images zur Verfügung stehen, aber auch "offizielle" Images.
+
+Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "private" Images zu hosten, aber auch um den Overhead zu vermeiden, der mit dem Herunterladen von Images über das Internet einhergeht. 
+
 
 ### Docker download
 Als Erstes geht es darum Docker zu installieren. Ich arbeite auf einer Ubuntu VM.
@@ -125,9 +130,30 @@ Nach der Installation kann man die Funktionsfähigkeit von Docker mit dem folgen
 
 > run 'Hello-world'
 
-![](/Users/Davide/Desktop/M300 LB3/lb03/3.png)
+![](/Users/Davide/Desktop/M300/lb03/3.png)
 
 Falls dieses Bild erscheint kann man mit den Container & Images fortfahren.
+
+### Docker Hub
+***
+Die einfachste Möglichkeit, eigene Images bereitzustellen, ist der Einsatz des Dockers Hub.
+
+Bei diesem handelt es sich um die von Docker Inc. angebotene Online-Registry.
+
+Der Hub ermöglicht kostenlose Repositories für öffentliche Images, die Anwender können aber auch für private Repositories bezahlen.
+
+**Docker Hub einrichten** <br>
+Um seine eigenen Images auf Docker Hub hochzuladen ist wie folgt vorzugehen: 
+1. Acount auf Docker Hub eröffnen.
+2. Imagenamen mit Usernamen, laut Account auf Docker Hub, taggen:
+    ```Shell
+        $ docker tag mysql username/mysql
+    ```
+3. Image hochladen:
+    ```Shell
+        $ docker push username/mysql
+    ```
+4. Dashboard auf Docker Hub anwählen und Image beschreiben.
 
 ### Docker Container & Images
 Ein Container beinhaltet Services, ohne dass man diese installieren. Das Konzept dahinter basiert auf Dockerfiles. Mit diesen kann man Images erstellen.
@@ -269,8 +295,6 @@ Die Capabilities decken einen grossen Funktionsbereich ab, vom Ändern der Syste
  
 ![](/Images/docker/Capabilities-protection.JPG)
 
-## Docker Projekt Node & Mongo DB
-Für mein letztes Projekt habe ich zwei Dockercontainer miteinander verbunden. Eine App erstellt eine Einkaufsliste. Die Elemente werden in einer Datenbank abgespeichert. Hierzu habe ich Node und Mongo DB verwendet.
 
 ## Wissenszuwachs
 In den letzten Jahren habe ich stets mit VMs gearbeitet. Container waren mir nicht bekannt. Ich habe die Services immer installieren müssen und konfigurieren müssen. Mit Docker erspart man sich da viel Arbeit. 
