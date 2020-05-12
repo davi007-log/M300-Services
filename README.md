@@ -64,6 +64,7 @@ Diese Beurteilung beinhaltet keine Dokumente, da es sich hier um eine Theoriepr�
 
 ### Docker
 ![](https://vshn.ch/wp-content/uploads/2016/12/20161128123126-large_v-trans-300x268.png)
+<br>
 Docker nahm die bestehende Linux-Containertechnologie auf und verpackte und erweiterte sie in vielerlei Hinsicht – vor allem durch portable Images und eine benutzerfreundliche Schnittstelle –, um eine vollständige Lösung für das Erstellen und Verteilen von Containern zu schaffen.
 
 Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten: der Docker Engine, die für das Erstellen und Ausführen von Containern verantwortlich ist, sowie dem Docker Hub, einem Cloud Service, um Container-Images zu verteilen.
