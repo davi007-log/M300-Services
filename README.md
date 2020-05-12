@@ -321,9 +321,8 @@ Die Capabilities decken einen grossen Funktionsbereich ab, vom Ändern der Syste
 
 
 ## Wissenszuwachs
-In den letzten Jahren habe ich stets mit VMs gearbeitet. Container waren mir nicht bekannt. Ich habe die Services immer installieren müssen und konfigurieren müssen. Mit Docker erspart man sich da viel Arbeit. 
+Da mir ganz am Anfang nicht richtig bewusst war wie man Container erstellt fand ich dieses äusserst hilfreich um mein WIssen zu erweitern und mich auf das zu fokussieren. Dank Internetrecherchen und Youtube tutorials konnte ich sehr viel profitieren und in der Lb03 umsetzen. Da ich soweit nie richtig mit Docker oder Container gearbeitet habe fiel mir es für den ersten Schritt schwierig, doch mit der Zeit lernte ich dies problemlos.
 
-Ich habe mit intensiv mit Docker befasst und viele nützliche Dinge kennengelernt, welche mir auf meinem weiteren Weg nützlich sein werden.
 
 ## Reflexion
-In dieser zweiten Arbeit von diesem Modul habe ich einen guten Einblick in die Welt der Container erhalten. Ich weiss jetzt wie man mit Docker sehr schnell Services zum laufen bringt und diese auch verwalten kann. Ich habe sehr viel Freude an diesem Bereich erhalten und kann mir vorstellen in Zukunft damit zu arbeiten.
+Während dem konfigurieren, bereitstellen des Systems und der Dokumentation tauchten ein paar Probleme auf die mir auch sehr viel Zeit kosteten. Doch durch die Bemühungen ausprobieren und recherchieren konnte ich diese Probleme umgehen und weiterarbeite. Somit konnte ich neben den erteilten Aufgaben die im Bewertungsraster zu finden sind, noch mein WIssen erweitern und vom Modul noch mehr profitieren. Somit kann ich zum Schluss sagen, dass mir das Modul sehr weitergeholfen hat und ich das sehr schätze.
