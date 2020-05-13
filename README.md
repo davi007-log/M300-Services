@@ -223,7 +223,7 @@ den Container "betreten"
 Man kann auch Images erstellen. Für das habe ich ein bestehendes Image genommen (nginx) und habe darauf meine Webseite gemacht. Das Image habe ich im Anschluss auf Dockerhub gepushed.
 
 Als erstes erstellt man den Container mit dem Image und mapped den Ordner im Image drin, welchen man bearbeiten will in einen Ordner auf dem Hostsystem:
-> docker container run -d -p 8080:80 nginx -v $(pwd):/usr/share/nginx/html --name nginx-website-m300 nginx
+> docker container run -d -p 8080:80 nginx -v $(pwd):/usr/share/nginx/html --name nginx-website nginx
 
 Ich habe mir einen Test Ordner erstellt, welchen ich gemappt habe. Im Command ist das "$(pwd)" zu finden, und das ist dafür da, dass dieser Ordner in dem man sich gerade befindet, gemeint ist. 
 
@@ -238,7 +238,7 @@ Hier kann man nun ein Image erstellen. Dies ist mit dem Docker File zu machen. H
 Im Dockerfile habe ich definiert, mit welchem Image ich arbeite, wo meine Workdirectory ist und, dass das Image alle Inhalte von der Workdirectory in mein Image kopieren soll.
 
 Als nächstes geht es darum, das Image zu "bauen". Dies macht man mit folgendem Command:
-> docker image build -t davidem300/homepage-nginx . 
+> docker image build -t davidem300/nginx-website . 
 
 ![](/Images/docker image build.png)
 
@@ -248,7 +248,7 @@ Docker image build -t würde das Image lokal abspeichern. Da ich es jedoch nachh
 Nun ist das Image lokal verfügbar, und man kann bereits mit dem einen Container erstellen. Jedoch möchte ich, dass ich das von jedem Computer aus machen kann. Also pushe ich das noch von meinem Dockerhub Account.
 
 Der Command dazu wäre:
-> Docker push davidem300/nginx-website-m300
+> Docker push davidem300/nginx-website
 
 ![](/Images/docker push.png)
 
